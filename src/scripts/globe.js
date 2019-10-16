@@ -7,7 +7,7 @@
       horizontalTilt: 0
     }
     let locations = [];
-    const svg = d3.select('svg')
+    const svg = d3.select('.globe')
       .attr('width', width).attr('height', height);
     const markerGroup = svg.append('g');
     const projection = d3.geoOrthographic();
@@ -17,7 +17,7 @@
 
     drawGlobe();
     drawGraticule();
-    enableRotation();
+    // enableRotation();
 
     function drawGlobe() {
       d3.queue()
@@ -81,10 +81,27 @@
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
           return gdistance > 1.57 ? 'none' : 'red';
         })
-        .attr('r', 4); //control size of markers
+        .attr('r', 4) //control size of markers
+        .attr("class", "player")
+        .on("click", handleClick);
 
       markerGroup.each(function () {
         this.parentNode.appendChild(this);
       });
     }
+
+    function handleClick(d, i) {
+      
+      d3.select(this).attr("fill", d => {
+        const coordinate = [d.longitude, d.latitude];
+        gdistance = d3.geoDistance(coordinate, projection.invert(center));
+        return gdistance > 1.57 ? "none" : "yellow";
+      });
+
+      // const body = d3.select("body");
+      // body.append("div").attr("width", 50)
+      //   .attr("height", 50);
+      d3.selectAll(".data").attr("class", "invis");
+    }
   
+
