@@ -1,50 +1,158 @@
 [
   {
+    "country": "Australia", 
+    "country_id": 57000021,
     "latitude": -24.5271348225978,
-    "longitude": 135.87890625
+    "longitude": 135.87890625,
+    "tag": "#CG980CR",
+    "name": "Gally❤Giant",
+    "bestTrophies": 7797,
+    "wins": 30789,
+    "losses": 23806,
+    "battleCount": 59434,
+    "threeCrownWins": 6014
   },
   {
+    "country": "France",
+    "country_id": 57000087,
     "latitude": 48.28319289548349,
-    "longitude":  3.3837890625
+    "longitude":  3.3837890625,
+    "tag": "#8Y2LP9L2",
+    "name": "<c5>Ruusskov",
+    "bestTrophies": 7762,
+    "wins": 20328,
+    "losses": 14446,
+    "battleCount": 38814,
+    "threeCrownWins": 2978
   },
   {
+    "country": "India",
+    "country_id": 57000113,
     "latitude": 23.644524198573688,
-    "longitude": 78.662109375
+    "longitude": 78.662109375,
+    "tag": "#2JQJL2PU",
+    "name": "Infinity Mukul",
+    "bestTrophies": 7380,
+    "wins": 28340,
+    "losses": 24796,
+    "battleCount": 59921,
+    "threeCrownWins": 10246
   },
   {
+    "country": "Japan",
+    "country_id": 57000122,
     "latitude": 37.579412513438385,
-    "longitude": 139.482421875
+    "longitude": 139.482421875,
+    "tag": "#20GJJPU9",
+    "name": "天気の子☀️かずと",
+    "bestTrophies": 7741,
+    "wins": 13661,
+    "losses": 10398,
+    "battleCount": 26328,
+    "threeCrownWins": 4718
   },
   {
+    "country": "Russia",
+    "country_id": 57000193,
     "latitude": 58.81374171570782,
-    "longitude": 93.69140625
+    "longitude": 93.69140625,
+    "tag": "#V0YGGCR",
+    "name": "DreamingFly™⚽",
+    "bestTrophies": 7592,
+    "wins": 20838,
+    "losses": 13115,
+    "battleCount": 38592,
+    "threeCrownWins": 5584
   },
   {
+    "country": "South Africa",
+    "country_id": 57000215,
     "latitude": -27.371767300523032,
-    "longitude": 23.37890625
+    "longitude": 23.37890625,
+    "tag": "#2JP9LQV9",
+    "name": "sir g",
+    "bestTrophies": 7141,
+    "wins": 29368,
+    "losses": 25341,
+    "battleCount": 61792,
+    "threeCrownWins": 8268
   },
   {
+    "country": "South Korea",
+    "country_id": 57000216,
     "latitude": 36.84446074079564,
-    "longitude": 127.79296875
+    "longitude": 127.79296875,
+    "tag": "#8G2CJYQV",
+    "name": "☆Mogun I Kwon☆",
+    "bestTrophies": 7916,
+    "wins": 20322,
+    "losses": 17852,
+    "battleCount": 41974,
+    "threeCrownWins": 3457
   },
   {
+    "country": "United Kingdom",
+    "country_id": 57000248,
     "latitude": 54.1109429427243,
-    "longitude": -1.845703125
+    "longitude": -1.845703125,
+    "tag": "#8UVLQ0Y2",
+    "name": "Dark | Doctor G",
+    "bestTrophies": 7607,
+    "wins": 11424,
+    "losses": 8732,
+    "battleCount": 23579,
+    "threeCrownWins": 3181
   },
   {
+    "country": "United States",
+    "country_id": 57000249,
     "latitude": 40.58058466412761,
-    "longitude": -76.640625
+    "longitude": -76.640625,
+    "tag": "#82GL8YP",
+    "name": "⭐️Bag⭐️",
+    "bestTrophies": 8076,
+    "wins": 12608,
+    "losses": 7554,
+    "battleCount": 22344,
+    "threeCrownWins": 3098
   },
   {
+    "country": "Canada",
+    "country_id": 57000047,
     "latitude": 50.84757295365389,
-    "longitude": -83.3203125
+    "longitude": -83.3203125,
+    "tag": "#GQGY2RG2",
+    "name": "Flexᕦ(ò_óˇ)ᕤTBD",
+    "bestTrophies": 7289,
+    "wins": 27286,
+    "losses": 23596,
+    "battleCount": 56619,
+    "threeCrownWins": 8397
   },
   {
+    "country": "China",
+    "country_id": 57000056,
     "latitude": 43.068887774169625,
-    "longitude": 115.6640625
+    "longitude": 115.6640625,
+    "tag": "#LGLL8LLC",
+    "name": "舞❤️喵",
+    "bestTrophies": 8030,
+    "wins": 13296,
+    "losses": 9487,
+    "battleCount": 26325,
+    "threeCrownWins": 3721
   },
   {
+    "country": "Germany",
+    "country_id": 57000094,
     "latitude": 52.05249047600099,
-    "longitude": 11.8212890625
+    "longitude": 11.8212890625,
+    "tag": "#8CGV2Y0",
+    "name": "SK⭐️Flobby⭐️",
+    "bestTrophies": 7929,
+    "wins": 15089,
+    "losses": 10625,
+    "battleCount": 27513,
+    "threeCrownWins": 4158
   }
 ]

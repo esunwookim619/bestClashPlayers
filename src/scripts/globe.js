@@ -1,4 +1,4 @@
-
+    
     const width = 400;
     const height = 370;
     const config = {
@@ -84,7 +84,6 @@
         .attr('r', 4) //control size of markers
         .attr("class", "player")
         .on("mouseenter", handleClick);
-        //.data
 
       markerGroup.each(function () {
         this.parentNode.appendChild(this);
@@ -92,16 +91,19 @@
     }
 
     function handleClick(d, i) {
-      // debugger
       d3.select(this).attr("fill", d => {
         const coordinate = [d.longitude, d.latitude];
         gdistance = d3.geoDistance(coordinate, projection.invert(center));
         return gdistance > 1.57 ? "none" : "yellow";
       });
-
+      
       // const body = d3.select("body");
       // body.append("div").attr("width", 50)
       //   .attr("height", 50);
+      data1 = { a: d.wins, b: d.losses };
+      data2 = { a: d.threeCrownWins, b: d.battleCount }
+      best = d.bestTrophies;
+      update(data1);
       d3.selectAll(".invis").attr("class", "datacontainer");
     }
   
