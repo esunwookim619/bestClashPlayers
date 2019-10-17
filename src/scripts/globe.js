@@ -81,7 +81,7 @@
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
           return gdistance > 1.57 ? 'none' : 'red';
         })
-        .attr('r', 4) //control size of markers
+        .attr('r', 5) //control size of markers
         .attr("class", "player")
         .on("mouseenter", handleClick);
 
@@ -96,14 +96,13 @@
         gdistance = d3.geoDistance(coordinate, projection.invert(center));
         return gdistance > 1.57 ? "none" : "yellow";
       });
-      
-      // const body = d3.select("body");
-      // body.append("div").attr("width", 50)
-      //   .attr("height", 50);
+      // api fetches go here
       data1 = { a: d.wins, b: d.losses };
-      data2 = { a: d.threeCrownWins, b: d.battleCount }
+      data2 = { a: d.threeCrownWins, b: d.battleCount - d.threeCrownWins }
       best = d.bestTrophies;
-      update(data1);
+      playername = d.name;
+      country = d.country;
+      update(data1, 1, best, playername, country);
       d3.selectAll(".invis").attr("class", "datacontainer");
     }
   

@@ -9,78 +9,31 @@
   <link rel="stylesheet" href="./dist/main.css">
   <title>Best Clash Players</title>
   <script>
-  let data1 = { a: 50 };
-  let data2 = { a: 50 };
-  let data3;
-  let best;
+  let data1 = { a: 50, b: 50 };
+  let data2 = { a: 50, b: 50 };
+  let best = 0;
+  let playername = "";
+  let country = "";
   </script>
 
-  <script>
-  function update(data) {
-
-      // Compute the position of each group on the pie:
-      var pie = d3.pie()
-        .value(function (d) { return d.value; })
-        .sort(function (a, b) { console.log(a); return d3.ascending(a.key, b.key); }) // This make sure that group order remains the same in the pie chart
-      var data_ready = pie(d3.entries(data))
-
-      // map to data
-      var u = svg2.selectAll("path")
-        .data(data_ready)
-
-
-      // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-
-      u.enter()
-        .append("path")
-        .attr("class", "pieslice")
-        .merge(u)
-        // .transition()
-        // .duration(1000)
-        .attr(
-          "d",
-          d3
-            .arc()
-            .innerRadius(0)
-            .outerRadius(radius)
-        )
-        .attr("fill", function (d) {
-          return color(d.data.key);
-        })
-        .attr("stroke", "white")
-        .style("stroke-width", "2px")
-        .style("opacity", 1);
-
-      // remove the group that is not present anymore
-      u
-        .exit()
-        .remove()
-
-    }
-  </script>
+  <script src="./src/scripts/chartupdate.js"></script>
 </head>
 
 <body>
-
-  
- 
-  <div id="app"></div>
-
+  <h1>Best Clash Royale Players</h1>
+  <div class="container">
   <div class="globecontainer">
   <svg class="globe"></svg>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="./src/scripts/globe.js"></script>
+  </div>
+  <img class="bowler" src="./src/styles/boulder.png"></img>
 
   
-  </div>
-
-  <!-- <div class="buttoncontainer"> -->
-  <button onclick="update(data1)">Data 1</button>
-  <button onclick="update(data2)">Data 2</button>
-  <!-- </div> -->
   <div class="invis">
-    <div class="winslosses"></div>
+    <button onclick="update(data1, 1, best, playername, country)">Wins/Losses</button>
+    <button onclick="update(data2, 2, best, playername, country)">3 Crown Wins</button>
     <div class="data"></div>
   </div>
   
@@ -89,6 +42,7 @@
   <script src="./src/scripts/piechart.js"></script>
 
   <script src="./dist/main.js"></script>
+  </div>
 </body>
 
 </html>

@@ -31,4 +31,4 @@ var color = d3.scaleOrdinal()
 
 
 // Initialize the plot with the first dataset
-update(data1)
+update(data1, 1, best, playername, country)
