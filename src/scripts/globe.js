@@ -2,7 +2,7 @@
     const width = 400;
     const height = 370;
     const config = {
-      speed: 0.005,
+      speed: 0.01,
       verticalTilt: -30,
       horizontalTilt: 0
     }

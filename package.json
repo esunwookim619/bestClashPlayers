@@ -39,5 +39,9 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "file-loader": "^4.2.0",
+    "url-loader": "^2.2.0"
   }
 }

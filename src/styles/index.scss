@@ -1,5 +1,7 @@
-html {
-
+.clashlogo {
+ height: 300px;
+ position: absolute;
+ left: 330px;
 }
 
 .container {
@@ -19,6 +21,7 @@ html {
   position: absolute;
   left: 600px;
   z-index: 2;
+ 
 }
 
 .invis {
