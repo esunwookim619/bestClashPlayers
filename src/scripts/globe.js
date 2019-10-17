@@ -2,7 +2,7 @@
     const width = 400;
     const height = 370;
     const config = {
-      speed: 0.02,
+      speed: 0.005,
       verticalTilt: -30,
       horizontalTilt: 0
     }
@@ -17,7 +17,7 @@
 
     drawGlobe();
     drawGraticule();
-    // enableRotation();
+    enableRotation();
 
     function drawGlobe() {
       d3.queue()
@@ -83,7 +83,8 @@
         })
         .attr('r', 4) //control size of markers
         .attr("class", "player")
-        .on("click", handleClick);
+        .on("mouseenter", handleClick);
+        //.data
 
       markerGroup.each(function () {
         this.parentNode.appendChild(this);
@@ -91,7 +92,7 @@
     }
 
     function handleClick(d, i) {
-      
+      // debugger
       d3.select(this).attr("fill", d => {
         const coordinate = [d.longitude, d.latitude];
         gdistance = d3.geoDistance(coordinate, projection.invert(center));
@@ -101,7 +102,7 @@
       // const body = d3.select("body");
       // body.append("div").attr("width", 50)
       //   .attr("height", 50);
-      d3.selectAll(".data").attr("class", "invis");
+      d3.selectAll(".invis").attr("class", "datacontainer");
     }
   
 

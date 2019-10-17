@@ -1,5 +1,18 @@
+.globecontainer {
 
-.data {
+}
+
+.invis {
+  display: none;
+}
+
+.datacontainer {
+ position: absolute;
+ right: 0;
+}
+
+.buttoncontainer {
+  display: flex;
   position: absolute;
-  right: 0;
+  right: 100px;
 }
