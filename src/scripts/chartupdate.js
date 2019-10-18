@@ -9,9 +9,9 @@ function update(data, n, best, playername, country) {
       return d.value;
     })
     .sort(function(a, b) {
-      console.log(a);
+      // console.log(a);
       return d3.ascending(a.key, b.key);
-    }); // This make sure that group order remains the same in the pie chart
+    }); 
   var data_ready = pie(d3.entries(data));
 
   var u = svg2.selectAll("path").data(data_ready);
@@ -46,11 +46,11 @@ function update(data, n, best, playername, country) {
     x2 = -120;
     y2 = 0;
   } else {
-    str = ["Yes", "No"];
-    x1 = 10;
-    y1 = -130;
-    x2 = -130;
-    y2 = 50;
+    str = ["Wins", "Total games"];
+    x1 = 5;
+    y1 = -140;
+    x2 = -80;
+    y2 = 70;
   }
 
   svg2.data([data_ready[0]]);
@@ -86,9 +86,9 @@ function update(data, n, best, playername, country) {
     .attr("x", -60)
     .attr("y", 220)
     .attr("font-family", "sans-serif")
+    .attr("stroke", "white")
     .attr("font-size", 12)
     .text(function(d) {
-      
       let num = "Best trophies: " + d;
       return num;
     });
@@ -101,6 +101,7 @@ function update(data, n, best, playername, country) {
       .attr("y", -210)
       .attr("font-family", "sans-serif")
       .attr("font-size", 12)
+      .attr("stroke", "white")
       .text(function(d) {
         let num = "Player name: " + d;
         return num;
@@ -111,8 +112,9 @@ function update(data, n, best, playername, country) {
        .append("text")
        .attr("class", "text")
        .attr("x", -45)
-       .attr("y", -190)
+       .attr("y", -195)
        .attr("font-family", "sans-serif")
+       .attr("stroke", "white")
        .attr("font-size", 12)
        .text(function(d) {
          let num = "Country: " + d;

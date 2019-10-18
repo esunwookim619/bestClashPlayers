@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="./dist/main.css">
   <title>Best Clash Players</title>
+
   <script>
   let data1 = { a: 50, b: 50 };
   let data2 = { a: 50, b: 50 };
@@ -21,6 +22,8 @@
 
 <body>
   <img class="clashlogo" src="./src/styles/clashlogo.png"></img>
+  <img class="prince" src="./src/styles/prince.png"></img>
+  <img class="laugh" src="./src/styles/laughingemote.png"></img>
   <div class="container">
   <div class="globecontainer">
   <svg class="globe"></svg>
@@ -28,15 +31,18 @@
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="./src/scripts/globe.js"></script>
   </div>
-  <img class="bowler" src="./src/styles/boulder.png"></img>
-  <!-- <img class="background" src="./src/styles/background.jpg"></img> -->
+  <img class="bowler" src="./src/styles/bowler.png"></img>
   
   <div class="invis">
-    <button onclick="update(data1, 1, best, playername, country)">Wins/Losses</button>
-    <button onclick="update(data2, 2, best, playername, country)">3 Crown Wins</button>
+    <a class="imageAnchor" href="#">
+      <img class="firstbutton" src="./src/styles/1v1.png" onclick="update(data1, 1, best, playername, country)"></img>
+    </a>
+    <a class="imageAnchor" href="#">
+      <img class="secondbutton" src="./src/styles/3crown.png" onclick="update(data2, 2, best, playername, country)"></img>
+    </a>
     <div class="data"></div>
+    <img class="trophy" src="./src/styles/trophy.png">
   </div>
-  
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="./src/scripts/piechart.js"></script>

@@ -1,6 +1,6 @@
-    
     const width = 400;
     const height = 370;
+    let markercolor = "#a3262d";
     const config = {
       speed: 0.01,
       verticalTilt: -30,
@@ -79,26 +79,22 @@
         .attr('fill', d => {
           const coordinate = [d.longitude, d.latitude];
           gdistance = d3.geoDistance(coordinate, projection.invert(center));
-          return gdistance > 1.57 ? 'none' : 'red';
+          return gdistance > 1.57 ? "none" : markercolor;
         })
         .attr('r', 5) //control size of markers
         .attr("class", "player")
-        .on("mouseenter", handleClick);
+        .on("mouseenter", handleHover);
 
       markerGroup.each(function () {
         this.parentNode.appendChild(this);
       });
     }
 
-    function handleClick(d, i) {
-      d3.select(this).attr("fill", d => {
-        const coordinate = [d.longitude, d.latitude];
-        gdistance = d3.geoDistance(coordinate, projection.invert(center));
-        return gdistance > 1.57 ? "none" : "yellow";
-      });
+    function handleHover(d, i) { 
+      // markercolor = "yellow";
       // api fetches go here
       data1 = { a: d.wins, b: d.losses };
-      data2 = { a: d.threeCrownWins, b: d.battleCount - d.threeCrownWins }
+      data2 = { a: d.threeCrownWins, b: d.battleCount }
       best = d.bestTrophies;
       playername = d.name;
       country = d.country;
