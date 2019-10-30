@@ -17,7 +17,7 @@
 
     drawGlobe();
     drawGraticule();
-    enableRotation();
+    // enableRotation();
 
     function drawGlobe() {
       d3.queue()
@@ -33,10 +33,8 @@
             .append("path")
             .attr("class", "segment")
             .attr("d", path)
-            // .style("stroke", "#888")
             .style("stroke", "black")
             .style("stroke-width", ".5px")
-            // .style("fill", (d, i) => '#e5e5e5')
             .style("fill", (d, i) => "#d09b69")
             .style("opacity", "1");
           locations = locationData;
@@ -46,26 +44,18 @@
 
     function drawGraticule() {
       const graticule = d3.geoGraticule()
-        // .step([10, 10]);
         .step([.3, 0]);
 
       svg.append("path")
         .datum(graticule)
         .attr("class", "graticule")
         .attr("d", path)
-        // .style("fill", "#fff")
         .style("fill", "steelblue")
-        // .style("stroke", "#ccc");
         .style("stroke", "steelblue")
     }
 
-    function enableRotation() {
-      d3.timer(function (elapsed) {
-        projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-        svg.selectAll("path").attr("d", path);
-        drawMarkers();
-      });
-    }
+    // function enableRotation() {
+    // }
 
     function drawMarkers() {
       const markers = markerGroup.selectAll('circle')
@@ -91,8 +81,6 @@
     }
 
     function handleHover(d, i) { 
-      // markercolor = "yellow";
-      // api fetches go here
       data1 = { a: d.wins, b: d.losses };
       data2 = { a: d.threeCrownWins, b: d.battleCount }
       best = d.bestTrophies;
@@ -102,4 +90,35 @@
       d3.selectAll(".invis").attr("class", "datacontainer");
     }
   
+    let totalElapsedTime = 0;
+    let startTime = d3.now() - totalElapsedTime;
+    let t = d3.timer(function(elapsed) {
+      let elapsedTime = d3.now() - startTime;
+      projection.rotate([
+        config.speed * elapsedTime - 120,
+        config.verticalTilt,
+        config.horizontalTilt
+      ]);
+      svg.selectAll("path").attr("d", path);
+      drawMarkers();
+    });
+
+    function stop() {
+      totalElapsedTime = d3.now() - startTime;
+      t.stop();
+    }
+
+    function restart() {
+      startTime = d3.now() - totalElapsedTime;
+      t.restart(function(elapsed) {
+        let elapsedTime = d3.now() - startTime;
+        projection.rotate([
+          config.speed * elapsedTime - 120,
+          config.verticalTilt,
+          config.horizontalTilt
+        ]);
+        svg.selectAll("path").attr("d", path);
+        drawMarkers();
+      });
+    }
 

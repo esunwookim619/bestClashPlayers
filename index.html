@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <style>
+    @font-face {
+    font-family: clashRoyaleFont;
+    src: url("YouBlockhead.ttf");
+    }
+  </style>
   <link rel="stylesheet" href="./dist/main.css">
   <title>Best Clash Players</title>
 
@@ -30,6 +35,9 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://d3js.org/topojson.v1.min.js"></script>
   <script src="./src/scripts/globe.js"></script>
+  <img class="stopbutton" src="./src/styles/stop.png" onclick="stop()"></img>
+  <img class="resumebutton" src="./src/styles/resume.png" onclick="restart()"></img>
+  
   </div>
   <img class="bowler" src="./src/styles/bowler.png"></img>
   
@@ -46,6 +54,13 @@
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="./src/scripts/piechart.js"></script>
+
+  <div class="instructions">
+    <h3>Instructions</h3>
+    <p>1. Hover over a location on the globe to see one of the country's top players' stats.</p>
+    <p>2. Click on "1 V 1" button to see the player's wins and losses in competitive play: red represents the player's wins while blue represents their losses.</p>
+    <p>3. Click on the "3 Crown" button to see the player's 3 crown win ratio: red represents the player's wins while blue represents their total games.</p>
+  </div>
 
   <script src="./dist/main.js"></script>
   </div>

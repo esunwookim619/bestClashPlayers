@@ -1,3 +1,5 @@
+
+
 body{
   margin:0;
   padding:0;
@@ -10,27 +12,26 @@ body{
   background-size: 45px 80px;
 }
 
-
 .clashlogo {
  height: 300px;
  position: relative;
- left: 330px;
+ left: 540px;
  bottom: 80px;
 }
 
 .prince {
   position: absolute;
   height: 120px;
-  left: 630px;
+  left: 840px;
   top: 10px
 }
 
 .laugh {
   position: absolute;
-  height: 150px;
-  transform: rotate(45deg);
-  left: 900px;
-  top: 20px;
+  height: 130px;
+  transform: rotate(180deg);
+  left: 1100px;
+  top: 0;
 }
 
 .container {
@@ -58,24 +59,24 @@ body{
 }
 
 .datacontainer {
- position: absolute;
- left: 20px;
+ position: relative;
+ right: 675px;
+ bottom: 50px;
 }
 
 .trophy {
   height: 20px;
   width: 20px;
   position: relative;
-  left: 280px;
-  bottom: 25px;
+  left: 305px;
+  bottom: 190px;
 }
 
 .firstbutton {
   border-radius: 4px;
   height: 30px;
   position: relative;
-  left: 140px;
-  border: 3px solid;
+  left: 135px;
 }
 
 .firstbutton:hover {
@@ -88,7 +89,6 @@ body{
   height: 30px;
   position: relative;
   left: 140px;
-  border: 3px solid;
 }
 
 .secondbutton:hover {
@@ -103,11 +103,39 @@ body{
 .imageAnchor {
   color: #0f4d84;
 }
-.imageAnchor:focus img{
-    border: 2px outset skyblue;
-    -webkit-filter: brightness(90%);
+
+.imageAnchor:focus img{  
+  box-shadow: 0 0 12px 0 #2199FF;
 }
 
+.instructions {
+  font-family: clashRoyaleFont;
+  position: absolute;
+  top: 10px;
+  left: 1100px;
+  width: 300px;
+  color: white;
+}
 
+.stopbutton {
+  border-radius: 4px;
+  height: 30px;
+  position: absolute;
+  left: 360px;
+  top: 10px;
+}
+
+.resumebutton {
+  border-radius: 4px;
+  height: 30px;
+  position: absolute;
+  left: 360px;
+  top: 45px;
+}
+
+.stopbutton:hover, .resumebutton:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(90%);
+}
 
 

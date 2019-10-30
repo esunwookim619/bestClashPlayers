@@ -1,6 +1,6 @@
 // set the dimensions and margins of the graph
 const width2 = 450;
-const height2 = 450;
+const height2 = 650;
 const margin = 40;
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
@@ -12,7 +12,7 @@ var svg2 = d3.select(".data")
     .attr("width", width2)
     .attr("height", height2)
   .append("g")
-    .attr("transform", "translate(" + width2 / 2 + "," + height2 / 2 + ")");
+    .attr("transform", "translate(" + width2 / 2 + "," + height2 / 2.85 + ")");
 
 // set the color scale
 var color = d3.scaleOrdinal()
