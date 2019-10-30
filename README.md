@@ -1,18 +1,19 @@
-## Best Clash Royale Players: A Global Look
+## Best Clash Royale Players: Data Visualization
 
 ### Background and Overview
 
   Clash Royale is a popular mobile game made by Supercell. As one of the top
   games from the Google Play Store, it is enjoyed by many and is even played
-  competitively, featuring global rankings and pro tournaments. Due to its 
-  competitive nature, data featuring statistics of gameplay is important to 
-  many players. Best Clash Royale Players features the best players around the world along with their main game statistics.
+  competitively: featuring global rankings and pro tournaments. Due to its 
+  competitive nature, statistics of gameplay is important to many players. 
+  Best Clash Royale Players features the best players around the world along 
+  with some of their game stats.
 
 ### Functionality and MVP Features
   Users will be able to:
   * View the locations of the top ranked players
-  * Toggle between win rates of various modes of competitive play
-  * See each player's trophy progression in a graph
+  * Toggle between different sets of data
+  * See each player's best trophy record.
 
 ### Data & APIs
 
@@ -20,10 +21,10 @@
 
 ### Wireframe
 
-  This visualization consists of a single screen containing a spinning globe (a), interactive pie charts (c), and a line graph (d).
+  This visualization consists of a single screen containing a spinning globe (a) and interactive pie charts (b).
   ![Clash Royale wireframe](assets/wireframe.png)
 
-  The globe allows the user to visualize the locations of the top ranked players. The list depicted by (b) will show the list of the top ranked players. The user will be able to toggle the location off of the globe by checking the users off and on. The interactive pie charts will show the win rates of each player for different game modes when clicked and the line graph will show the player's trophy progression.
+  The globe allows the user to visualize the locations of the top ranked players. The pie charts can be toggled to see the different stats of each player. The text (c) under each pie chart will display the actual number data from the pie chart along with the player's best trophy score. The text on the far right (d) lists more detailed instructions to help the user navigate through the page.
 
 ### Architecture and Technologies
   Best Clash Royale Players is built with: 
@@ -45,7 +46,6 @@
   Day 3: 
   * Set up pie charts for win rates for various game modes
   * Set up toggle feature or some other UI so switch between graphs
-  * Set up line graph to show trophy progression for each player
 
   Day 4:
   * Clean up features and make page visually appealing
