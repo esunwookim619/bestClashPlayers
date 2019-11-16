@@ -53,12 +53,12 @@ https://esunwookim619.github.io/bestClashPlayers/
       The globe was done using d3.geoOrthographic() along with its path 
       features.
 
-  ![Globe Screenshot](assets/globe_screenshot.png)
+      ![Globe Screenshot](assets/globe_screenshot.png)
 
       The Stop and Resume buttons were implemented by keeping tracking of the 
       time when utilizing .stop() and .restart().
 
-  ![Stop button code snippet](assets/stopbutton_codesnippet.png)
+      ![Stop button code snippet](assets/stopbutton_codesnippet.png)
 
   * Toggle between different sets of data
 
