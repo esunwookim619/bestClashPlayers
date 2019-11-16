@@ -1,4 +1,8 @@
-## Best Clash Royale Players: Data Visualization
+## Best Clash Royale Players: Data Visualization Version 1.0
+
+### Live Link
+
+https://esunwookim619.github.io/bestClashPlayers/
 
 ### Background and Overview
 
@@ -9,15 +13,12 @@
   Best Clash Royale Players features the best players around the world along 
   with some of their game stats.
 
-### Functionality and MVP Features
-  Users will be able to:
-  * View the locations of the top ranked players
-  * Toggle between different sets of data
-  * See each player's best trophy record.
+### Architecture and Technologies 
 
-### Data & APIs
-
-  Data is available from the Clash Royale API.
+  * D3.js for interactive visualization
+  * Javascript
+  * Webpack to bundle and serve up various scripts
+  * Clash Royale API
 
 ### Wireframe
 
@@ -25,12 +26,6 @@
   ![Clash Royale wireframe](assets/wireframe.png)
 
   The globe allows the user to visualize the locations of the top ranked players. The pie charts can be toggled to see the different stats of each player. The text (c) under each pie chart will display the actual number data from the pie chart along with the player's best trophy score. The text on the far right (d) lists more detailed instructions to help the user navigate through the page.
-
-### Architecture and Technologies
-  Best Clash Royale Players is built with: 
-  * D3.js for interactive visualization
-  * Javascript to retrieve data
-  * Webpack to bundle and serve up various scripts
 
 ### Implementation Timeline
 
@@ -49,4 +44,32 @@
 
   Day 4:
   * Clean up features and make page visually appealing
+
+### Functionality and MVP Features
+
+  Users will be able to:
+  * View the locations of the top ranked players
+
+      The globe was done using d3.geoOrthographic() along with its path 
+      features.
+
+  ![Globe Screenshot](assets/globe_screenshot.png)
+
+      The Stop and Resume buttons were implemented by keeping tracking of the 
+      time when utilizing .stop() and .restart().
+
+  ![Stop button code snippet](assets/stopbutton_codesnippet.png)
+
+  * Toggle between different sets of data
+
+      Toggling effect was done by implementing an update method that redrew the
+      pie chart with a new set of data. 
+
+  * See each player's best trophy record.
+
+### Future Implementations
+
+Data had to be static due to restrictions on fetching data through the Clash
+Royale API. Will implement feature to work around that where new data will only
+be fetched every 24 hours using some sort of timer.
 
