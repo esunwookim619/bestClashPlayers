@@ -16,9 +16,56 @@ https://esunwookim619.github.io/bestClashPlayers/
 ### Architecture and Technologies 
 
   * D3.js for interactive visualization
-  * Javascript
-  * Webpack to bundle and serve up various scripts
+  * Javascript 9
+  * Webpack 4.32.2 to bundle and serve up various scripts
   * Clash Royale API
+
+### Functionality and MVP Features
+
+  Users will be able to:
+  * View the locations of the top ranked players
+
+      The globe was done using d3.geoOrthographic() along with its path 
+      features.
+
+      ...javascript
+      function stop() {
+        totalElapsedTime = d3.now() - startTime;
+        t.stop();
+      }
+
+      function restart() {
+        startTime = d3.now() - totalElapsedTime;
+        t.restart(function(elapsed) {
+          let elapsedTime = d3.now() - startTime;
+          projection.rotate([
+            config.speed * elapsedTime - 120,
+            config.verticalTilt,
+            config.horizontalTilt
+          ]);
+          svg.selectAll("path").attr("d", path);
+          drawMarkers();
+        });
+      }
+      ...
+
+      The Stop and Resume buttons were implemented by keeping tracking of the 
+      time when utilizing .stop() and .restart().
+
+      ![Stop button code snippet](assets/stopbutton_codesnippet.png)
+
+  * Toggle between different sets of data
+
+      Toggling effect was done by implementing an update method that redrew the
+      pie chart with a new set of data. 
+
+  * See each player's best trophy record.
+
+### Future Implementations
+
+Data had to be static due to restrictions on fetching data through the Clash
+Royale API. Will implement feature to work around that where new data will only
+be fetched every 24 hours using some sort of timer.
 
 ### Wireframe
 
@@ -44,32 +91,4 @@ https://esunwookim619.github.io/bestClashPlayers/
 
   Day 4:
   * Clean up features and make page visually appealing
-
-### Functionality and MVP Features
-
-  Users will be able to:
-  * View the locations of the top ranked players
-
-      The globe was done using d3.geoOrthographic() along with its path 
-      features.
-
-      ![Globe Screenshot](assets/globe_screenshot.png)
-
-      The Stop and Resume buttons were implemented by keeping tracking of the 
-      time when utilizing .stop() and .restart().
-
-      ![Stop button code snippet](assets/stopbutton_codesnippet.png)
-
-  * Toggle between different sets of data
-
-      Toggling effect was done by implementing an update method that redrew the
-      pie chart with a new set of data. 
-
-  * See each player's best trophy record.
-
-### Future Implementations
-
-Data had to be static due to restrictions on fetching data through the Clash
-Royale API. Will implement feature to work around that where new data will only
-be fetched every 24 hours using some sort of timer.
 
