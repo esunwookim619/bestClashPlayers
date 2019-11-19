@@ -28,7 +28,7 @@ https://esunwookim619.github.io/bestClashPlayers/
       The globe was done using d3.geoOrthographic() along with its path 
       features.
 
-      ...javascript
+      ```javascript
       function stop() {
         totalElapsedTime = d3.now() - startTime;
         t.stop();
@@ -47,7 +47,7 @@ https://esunwookim619.github.io/bestClashPlayers/
           drawMarkers();
         });
       }
-      ...
+      ```
 
       The Stop and Resume buttons were implemented by keeping tracking of the 
       time when utilizing .stop() and .restart().
