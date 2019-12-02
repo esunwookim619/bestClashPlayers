@@ -17,7 +17,6 @@
 
     drawGlobe();
     drawGraticule();
-    // enableRotation();
 
     function drawGlobe() {
       d3.queue()
@@ -54,8 +53,6 @@
         .style("stroke", "steelblue")
     }
 
-    // function enableRotation() {
-    // }
 
     function drawMarkers() {
       const markers = markerGroup.selectAll('circle')
