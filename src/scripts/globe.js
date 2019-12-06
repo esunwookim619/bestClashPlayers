@@ -115,7 +115,7 @@
           config.horizontalTilt
         ]);
         svg.selectAll("path").attr("d", path);
-        drawMarkers();
+        drawMarkers();       
       });
     }
 
